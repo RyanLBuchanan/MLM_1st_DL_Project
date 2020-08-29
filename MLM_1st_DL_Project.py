@@ -1,8 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug 28 20:50:32 2020
+# First Keras Deep Learning project from Machine Learning Mastery
+# Input by Ryan L Buchanan on a lonely Friday night 28SUG20
 
-@author: vreed
-"""
+# First neural network with keras tutorial 
+import numpy as np
+from numpy import loadtxt
+from keras.models import Sequential
+from keras.layers import Dense
 
+# Load the dataset
+dataset = loadtxt("pima-indians-diabetes.csv", delimiter=',')
 
+# Split columns into input (X) and output (Y) variables
+X = dataset[:, 0:8]
+Y = dataset[:, 8]
